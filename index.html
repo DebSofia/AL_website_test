@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casa da Ribeira · Alojamento Local à beira do rio</title>
+  <meta name="description" content="Casa da Ribeira: alojamento local em casa de pedra restaurada junto ao rio, com jardim e lareira. Reserve direto, sem comissões.">
+  <meta name="theme-color" content="#F7F4EE">
+  <link rel="canonical" href="https://casadaribeira.example.com/">
+  <!-- Open Graph (título/descrição/imagem são também atualizados por main.js a partir de config.js) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Casa da Ribeira · Alojamento Local">
+  <meta property="og:description" content="Casa de pedra restaurada junto ao rio. Reserve direto, sem comissões.">
+  <meta property="og:image" content="https://picsum.photos/seed/river/1200/630">
+  <meta property="og:url" content="https://casadaribeira.example.com/">
+  <meta property="og:locale" content="pt_PT">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Favicon SVG inline -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235E6B4E'/%3E%3Cpath d='M12 31 32 14l20 17v19H12z' fill='%23F7F4EE'/%3E%3Cpath d='M8 54c6 0 6-4 12-4s6 4 12 4 6-4 12-4 6 4 12 4' stroke='%23C9CFBB' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Saltar para o conteúdo</a>
+
+<!-- ============ CABEÇALHO ============ -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="Início"><span data-cfg="property.name">Casa da Ribeira</span></a>
+    <nav id="nav" class="nav" aria-label="Principal">
+      <a href="#galeria" data-i18n="nav.gallery">Galeria</a>
+      <a href="#casa" data-i18n="nav.house">A Casa</a>
+      <a href="#comodidades" data-i18n="nav.amenities">Comodidades</a>
+      <a href="#anfitrioes" data-i18n="nav.hosts">Anfitriões</a>
+      <a href="#avaliacoes" data-i18n="nav.reviews">Avaliações</a>
+      <a href="#arredores" data-i18n="nav.nearby">Arredores</a>
+      <a href="#info" data-i18n="nav.info">Informações</a>
+      <a href="#contactos" data-i18n="nav.contact">Contactos</a>
+    </nav>
+    <div class="header-actions">
+      <button type="button" id="lang-toggle" class="lang-toggle" data-i18n-attr="aria-label:lang.label" aria-label="Mudar idioma"><span>PT / EN</span></button>
+      <a href="#reserva" class="btn btn-primary btn-sm" data-i18n="btn.book">Reservar</a>
+      <button type="button" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav" data-i18n-attr="aria-label:menu.label" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============ 1. HERO ============ -->
+<section class="hero" aria-labelledby="hero-title">
+  <img id="hero-img" class="hero-img" alt="" width="1920" height="1080" fetchpriority="high">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="eyebrow light" data-i18n="hero.eyebrow">Alojamento Local · Minho, Portugal</p>
+    <h1 id="hero-title" data-cfg="property.name">Casa da Ribeira</h1>
+    <p class="hero-tag" data-cfg="property.tagline"></p>
+    <a href="#reserva" class="btn btn-primary btn-lg" data-i18n="hero.cta">Ver disponibilidade</a>
+  </div>
+</section>
+
+<!-- ============ 2. GALERIA ============ -->
+<section id="galeria" class="section">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow" data-i18n="gallery.eyebrow">Galeria</p>
+      <h2 data-i18n="gallery.title">Espreite por dentro</h2>
+      <p class="lead" data-i18n="gallery.sub">Cada canto da casa foi pensado para descansar.</p>
+    </header>
+    <div id="gallery" class="gallery"></div>
+  </div>
+</section>
+
+<!-- ============ 3. A CASA ============ -->
+<section id="casa" class="section section-alt">
+  <div class="container split">
+    <figure class="split-img reveal"><img id="house-img" alt="" loading="lazy" width="900" height="1100"></figure>
+    <div class="reveal">
+      <p class="eyebrow" data-i18n="house.eyebrow">A Casa</p>
+      <h2 data-i18n="house.title">Uma casa com história</h2>
+      <div id="house-story" class="prose"></div>
+      <dl id="house-facts" class="facts"></dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. COMODIDADES ============ -->
+<section id="comodidades" class="section">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow" data-i18n="amen.eyebrow">Comodidades</p>
+      <h2 data-i18n="amen.title">Tudo o que precisa</h2>
+    </header>
+    <ul id="capacity" class="capacity reveal"></ul>
+    <ul id="amenities" class="amenities"></ul>
+  </div>
+</section>
+
+<!-- ============ 5. ANFITRIÕES ============ -->
+<section id="anfitrioes" class="section section-alt">
+  <div class="container split split-rev">
+    <figure class="split-img round reveal"><img id="hosts-img" alt="" loading="lazy" width="700" height="700"></figure>
+    <div class="reveal">
+      <p class="eyebrow" data-i18n="hosts.eyebrow">Anfitriões</p>
+      <h2><span data-i18n="hosts.title">Olá, somos</span> <span data-cfg="hosts.names"></span></h2>
+      <p class="prose" data-cfg="hosts.bio"></p>
+      <ul class="host-meta">
+        <li><strong data-i18n="hosts.languages">Idiomas</strong><span id="host-langs"></span></li>
+        <li><strong data-i18n="hosts.response">Tempo de resposta</strong><span data-cfg="hosts.responseTime"></span></li>
+        <li id="superhost" hidden><strong data-i18n="hosts.badge">Distinção</strong><span data-i18n="hosts.superhost">Superhost</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. DISPONIBILIDADE & RESERVA ============ -->
+<section id="reserva" class="section">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow" data-i18n="book.eyebrow">Reservas</p>
+      <h2 data-i18n="book.title">Disponibilidade e reserva</h2>
+      <p class="lead" data-i18n="book.sub">Escolha a entrada e a saída. Reserve direto e evite comissões.</p>
+    </header>
+
+    <div class="booking-grid">
+      <div class="cal-card">
+        <div class="cal-nav">
+          <button type="button" id="cal-prev" class="icon-btn" data-i18n-attr="aria-label:cal.prev" aria-label="Mês anterior">&#8249;</button>
+          <strong id="cal-title" aria-live="polite"></strong>
+          <button type="button" id="cal-next" class="icon-btn" data-i18n-attr="aria-label:cal.next" aria-label="Mês seguinte">&#8250;</button>
+        </div>
+        <div id="calendar" class="calendar"></div>
+        <ul class="legend">
+          <li><i class="dot free"></i><span data-i18n="cal.free">Livre</span></li>
+          <li><i class="dot booked"></i><span data-i18n="cal.booked">Ocupado</span></li>
+          <li><i class="dot sel"></i><span data-i18n="cal.selected">Selecionado</span></li>
+        </ul>
+        <p id="cal-hint" class="hint" aria-live="polite"></p>
+        <p id="demo-note" class="demo-note" hidden data-i18n="book.demoNote">Modo demonstração: datas ocupadas de exemplo.</p>
+      </div>
+
+      <form id="booking-form" class="form-card" novalidate>
+        <h3 data-i18n="book.summary">Resumo da estadia</h3>
+        <div id="price-summary" class="price-summary" aria-live="polite"></div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="f-guests" data-i18n="form.guests">Nº de hóspedes</label>
+            <select id="f-guests" name="guests" required></select>
+          </div>
+          <div class="field">
+            <label for="f-phone" data-i18n="form.phone">Telemóvel</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" required minlength="6">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-name" data-i18n="form.name">Nome</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required minlength="2">
+        </div>
+        <div class="field">
+          <label for="f-email" data-i18n="form.email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="f-message" data-i18n="form.message">Mensagem (opcional)</label>
+          <textarea id="f-message" name="message" rows="3" maxlength="1000"></textarea>
+        </div>
+        <div class="field hp" aria-hidden="true"><label>Website <input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+        <label class="check">
+          <input id="f-consent" name="consent" type="checkbox" required>
+          <span><span data-i18n="form.consent">Li e aceito a</span> <a href="privacidade.html" target="_blank" rel="noopener" data-i18n="form.privacy">política de privacidade</a>.</span>
+        </label>
+
+        <div class="pay-actions">
+          <button type="button" class="btn btn-primary btn-block" data-mode="pay" id="btn-pay" data-i18n="book.payNow">Pagar agora com cartão / MB WAY</button>
+          <button type="button" class="btn btn-outline btn-block" data-mode="request" id="btn-request" data-i18n="book.request">Pedido de reserva (pagar depois por transferência)</button>
+        </div>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        <p class="ota">
+          <span data-i18n="book.also">Também disponível no</span>
+          <a id="link-airbnb" href="#" target="_blank" rel="noopener">Airbnb</a> /
+          <a id="link-booking" href="#" target="_blank" rel="noopener">Booking.com</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. AVALIAÇÕES ============ -->
+<section id="avaliacoes" class="section section-alt">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow" data-i18n="reviews.eyebrow">Avaliações</p>
+      <h2 data-i18n="reviews.title">O que dizem os hóspedes</h2>
+    </header>
+    <div class="rating-summary reveal">
+      <div class="rating-big"><strong id="rating-avg">5,0</strong><span class="stars" id="rating-stars" aria-hidden="true"></span><small id="rating-count"></small></div>
+      <ul id="rating-sources" class="rating-sources"></ul>
+    </div>
+    <div class="carousel" aria-roledescription="carousel" data-i18n-attr="aria-label:reviews.title">
+      <button type="button" class="icon-btn car-btn" id="rev-prev" data-i18n-attr="aria-label:cal.prev2" aria-label="Anterior">&#8249;</button>
+      <div id="reviews" class="car-track" tabindex="0"></div>
+      <button type="button" class="icon-btn car-btn" id="rev-next" data-i18n-attr="aria-label:cal.next2" aria-label="Seguinte">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. PONTOS DE INTERESSE ============ -->
+<section id="arredores" class="section">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow" data-i18n="poi.eyebrow">Arredores</p>
+      <h2 data-i18n="poi.title">Descubra a região</h2>
+    </header>
+    <div id="poi-filters" class="filters" role="group" data-i18n-attr="aria-label:poi.filter"></div>
+    <div id="poi-list" class="cards"></div>
+    <div class="map-wrap reveal">
+      <iframe id="map" title="Mapa OpenStreetMap" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <a id="map-link" class="map-link" target="_blank" rel="noopener" data-i18n="poi.bigmap">Ver mapa maior</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. PARCERIAS ============ -->
+<section id="parcerias" class="section section-alt">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow" data-i18n="partners.eyebrow">Parcerias</p>
+      <h2 data-i18n="partners.title">Vantagens para hóspedes</h2>
+      <p class="lead" data-i18n="partners.sub">Mostre o código aos nossos parceiros locais.</p>
+    </header>
+    <div id="partners" class="cards cards-4"></div>
+  </div>
+</section>
+
+<!-- ============ 10. INFORMAÇÕES ÚTEIS ============ -->
+<section id="info" class="section">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow" data-i18n="info.eyebrow">Informações úteis</p>
+      <h2 data-i18n="info.title">Antes de chegar</h2>
+    </header>
+    <div class="info-grid">
+      <article class="info-card reveal">
+        <h3 data-i18n="info.times">Check-in e check-out</h3>
+        <p><strong data-i18n="info.checkin">Check-in:</strong> <span data-cfg="info.checkIn"></span></p>
+        <p><strong data-i18n="info.checkout">Check-out:</strong> <span data-cfg="info.checkOut"></span></p>
+        <p class="muted" data-cfg="info.selfCheckIn"></p>
+      </article>
+      <article class="info-card reveal"><h3 data-i18n="info.rules">Regras da casa</h3><ul id="info-rules"></ul></article>
+      <article class="info-card reveal"><h3 data-i18n="info.cancel">Política de cancelamento</h3><ul id="info-cancel"></ul></article>
+      <article class="info-card reveal"><h3 data-i18n="info.directions">Como chegar</h3><ul id="info-directions"></ul></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. FAQ ============ -->
+<section id="faq" class="section section-alt">
+  <div class="container narrow">
+    <header class="section-head reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2 data-i18n="faq.title">Perguntas frequentes</h2>
+    </header>
+    <div id="faq-list" class="faq"></div>
+  </div>
+</section>
+
+<!-- ============ 12. CONTACTOS ============ -->
+<section id="contactos" class="section">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <p class="eyebrow" data-i18n="contact.eyebrow">Contactos</p>
+      <h2 data-i18n="contact.title">Fale connosco</h2>
+      <ul class="contact-list">
+        <li><strong data-i18n="contact.phone">Telefone</strong><a id="c-phone" href="#"></a></li>
+        <li><strong>Email</strong><a id="c-email" href="#"></a></li>
+        <li><strong data-i18n="contact.address">Morada</strong><span data-cfg="property.address"></span></li>
+      </ul>
+      <a id="c-wa" class="btn btn-wa" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <form id="contact-form" class="form-card reveal" novalidate>
+      <div class="field"><label for="c-name" data-i18n="form.name">Nome</label><input id="c-name" name="name" type="text" autocomplete="name" required minlength="2"></div>
+      <div class="field"><label for="c-mail" data-i18n="form.email">Email</label><input id="c-mail" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="c-msg" data-i18n="form.messageReq">Mensagem</label><textarea id="c-msg" name="message" rows="4" required minlength="5" maxlength="2000"></textarea></div>
+      <div class="field hp" aria-hidden="true"><label>Website <input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+      <label class="check"><input id="c-consent" name="consent" type="checkbox" required>
+        <span><span data-i18n="form.consent">Li e aceito a</span> <a href="privacidade.html" target="_blank" rel="noopener" data-i18n="form.privacy">política de privacidade</a>.</span></label>
+      <button type="submit" class="btn btn-primary" data-i18n="contact.send">Enviar mensagem</button>
+      <p id="contact-status" class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============ 13. RODAPÉ ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <strong class="brand-foot" data-cfg="property.name"></strong>
+      <p><span data-i18n="footer.rnal">Nº de registo RNAL:</span> <span data-cfg="property.rnal"></span></p>
+      <p><span data-cfg="property.address"></span></p>
+    </div>
+    <ul class="footer-links">
+      <li><a id="f-complaints" href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener" data-i18n="footer.complaints">Livro de Reclamações Eletrónico</a></li>
+      <li><a href="privacidade.html" data-i18n="footer.privacy">Política de privacidade</a></li>
+      <li id="soc"></li>
+    </ul>
+  </div>
+  <div class="container copy">© <span id="year"></span> <span data-cfg="property.name"></span>. <span data-i18n="footer.rights">Todos os direitos reservados.</span></div>
+</footer>
+
+<div id="book-bar" class="book-bar">
+  <span class="book-bar-price"><span data-i18n="bar.from">desde</span> <strong id="bar-price"></strong> <span data-i18n="bar.night">/noite</span></span>
+  <a href="#reserva" class="btn btn-primary btn-sm" data-i18n="btn.book">Reservar</a>
+</div>
+
+<a id="wa-float" class="wa-float" target="_blank" rel="noopener" data-i18n-attr="aria-label:wa.label" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.300 1.200-1.800 1.200-.5.1-1 .2-3.300-.7-2.800-1.200-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.400 0 .5l-.3.500-.4.400c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.4.100.6-.1l.8-1c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.400z"/></svg>
+</a>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Galeria" hidden>
+  <button type="button" class="lb-close" id="lb-close" data-i18n-attr="aria-label:lb.close" aria-label="Fechar">&times;</button>
+  <button type="button" class="lb-nav lb-prev" id="lb-prev" data-i18n-attr="aria-label:cal.prev2" aria-label="Anterior">&#8249;</button>
+  <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+  <button type="button" class="lb-nav lb-next" id="lb-next" data-i18n-attr="aria-label:cal.next2" aria-label="Seguinte">&#8250;</button>
+</div>
+
+<!-- Aviso de cookies (apenas essenciais) -->
+<div id="cookie" class="cookie" role="region" data-i18n-attr="aria-label:cookie.label" aria-label="Cookies" hidden>
+  <p><span data-i18n="cookie.text">Este site usa apenas armazenamento essencial (preferência de idioma). Não usamos cookies de publicidade ou análise.</span> <a href="privacidade.html" data-i18n="footer.privacy">Política de privacidade</a></p>
+  <button type="button" id="cookie-ok" class="btn btn-primary btn-sm" data-i18n="cookie.ok">Entendi</button>
+</div>
+
+<script src="config.js"></script>
+<script src="i18n.js"></script>
+<script src="main.js"></script>
+<script src="booking.js"></script>
+</body>
+</html>

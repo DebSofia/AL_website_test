@@ -1,0 +1,15 @@
+{
+  "name": "casa-da-ribeira",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page de alojamento local com reservas diretas (Netlify Functions + Stripe)",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "dev": "netlify dev",
+    "check": "node --check config.js && node --check i18n.js && node --check main.js && node --check booking.js"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0",
+    "stripe": "^16.12.0"
+  }
+}
